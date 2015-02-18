@@ -3,17 +3,31 @@
  * Created by Weng on 2/2/2015.
  */
 public class ProjectEulerTwo {
-  public static void main(String[] args){
 
+  /**
+   * Compute sum of even fibonacci number below a max fib value.
+   * @param args Invalid.
+   */
+  public static void main(String[] args) {
+
+    System.out.print(sumOfEvenFib(4000000));
+  }
+
+  /**
+   * Computes sum of even fibonacci numbers below a maximum.
+   * @param maxNum Max fibonacci number.
+   * @return Sum of even fibonacci numbers.
+   */
+  public static int sumOfEvenFib(int maxNum) {
     int fibOne = 1;
     int fibTwo = 2;
     int fibThree = fibOne + fibTwo;
     int sum = fibTwo;
 
-    while(fibThree < 4000000) {
+    while (fibThree < maxNum) {
       //System.out.printf("%d ", fibThree);
 
-      if(fibThree%2 == 0){
+      if (fibThree % 2 == 0) {
         sum += fibThree;
       }
 
@@ -23,6 +37,6 @@ public class ProjectEulerTwo {
 
     }
 
-    System.out.print("\n" + sum);
+    return sum;
   }
 }
